@@ -18,6 +18,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: #EDF1F4;
 }
 
@@ -36,16 +39,22 @@ header {
 
 /* Navbar Desktop*/
 
-.nav__links {
-    list-style: none;
+nav ul li{
     display: inline-block;
     padding: 0px 20px;
 }
 
-
-.nav__links a {
+.nav__link {
+    color: white;
     text-decoration: none;
 }
+
+.nav__link:hover {
+    color: #5ec868;
+    text-decoration: none;
+}
+
+
 
 
 .cta {
@@ -59,6 +68,14 @@ button {
     text-align: center;
     background-color: #FFC406;
     border-radius: 8px;
+    outline: inherit;
+    color: white;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: bold;
 }
 
 
@@ -73,14 +90,11 @@ button {
         
 <!-- Navbar Desktop -->
         <header>
-            <div class="container">
                 <div class="brand">
                     <a href="#intro" class="#">
                         <img src="images/start2impact.png" alt="start2impact">
                     </a>
                 </div>    
-            </div>
-            
         <nav>
             <ul class="nav__links">
                 <li><a href="#" class="nav__link">ABOUT ME</a></li>
