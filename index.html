@@ -5,7 +5,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Progetto HTML & CSS | Ludovico Besana</title>
         <!-- <link rel="stylesheet" href="style.css"> -->
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/* Colors */
+
+
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #EDF1F4;
+}
+
+li, a , button {
+    font-family: "Montserrat", sans-serif;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #333;
+}
+
+
+/* Navbar Desktop*/
+
+.nav__links {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+.nav__links a {
+    text-decoration: none;
+}
+
+
+.cta {
+    text-decoration: none;
+}
+
+
+button {
+    width: 131px;
+    height: 52px;
+    text-align: center;
+    background-color: #FFC406;
+    border-radius: 8px;
+}
+
 
     
 </style>
@@ -15,34 +70,29 @@
     </head>
 
     <body>
+        
+<!-- Navbar Desktop -->
         <header>
             <div class="container">
-
                 <div class="brand">
-                    <a href="#intro" class="nav__brand">
+                    <a href="#intro" class="#">
                         <img src="images/start2impact.png" alt="start2impact">
                     </a>
                 </div>    
-
-
-
             </div>
             
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">ABOUT ME</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">PORTFOLIO</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">SKILLS</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">PERCORSO</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">COMMUNITY</a></li>
-                <li class="nav__item"><a href="mailto:info@ludovicobesana.com" class="nav__cta">CONTATTAMI</a></li>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#" class="nav__link">ABOUT ME</a></li>
+                <li><a href="#" class="nav__link">PORTFOLIO</a></li>
+                <li><a href="#" class="nav__link">SKILLS</a></li>
+                <li><a href="#" class="nav__link">PERCORSO</a></li>
+                <li><a href="#" class="nav__link">COMMUNITY</a></li>
             </ul>
         </nav>
+        <a href="mailto:info@ludovicobesana.com" class="cta"><button>CONTATTAMI</button></a>
         </header>
-
+<!-- End Navbar -->
 
 
 
