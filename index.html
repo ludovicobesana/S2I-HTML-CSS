@@ -8,6 +8,7 @@
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /* Colors */
 
@@ -17,6 +18,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -88,7 +90,37 @@ button {
     font-weight: bold;
 }
 
+.about-card {
+    max-width: 1148px;
+    width: 100%;
+    height: 662px;
+    padding: 2rem 2rem 0 2rem;
+    background-color: white;
+    border-radius: 8px;
+}
 
+.about__title {
+  font-family: "Poppins", sans-serif;
+  color: #F0F0F0;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 190px;
+  letter-spacing: -2px;
+}  
+
+.about-card .about-card__description {
+  word-break: break-word;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  margin-top: 40px;
+}
+
+.green {
+  color: #5ec868;
+}
+
+  
     
 </style>
 
@@ -119,11 +151,36 @@ button {
 <!-- End Navbar -->
 
 
+<!-- About me Section -->
+<section id="about" class="about">
+<div class="about-card">  
+<div class="about__title">ABOUT ME</div>
+<div class="about-card__description">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum odio sed orci tristique pharetra. 
+  Sed dignissim metus vitae erat pulvinar ullamcorper. 
+  Mauris vitae lacus risus. Nulla pulvinar purus et tortor posuere convallis. 
+  Nulla efficitur egestas tellus et viverra. Aenean fringilla odio eu pharetra vulputate. 
+  In augue est, convallis sed congue at, dapibus quis mi. Morbi vel tortor rhoncus, fringilla nisi nec, 
+  scelerisque orci. Proin vulputate non enim ut fermentum. Vivamus id tristique mauris, non venenatis risus. Duis sit amet tincidunt eros. 
+  Phasellus eros erat, mattis non ultrices malesuada, lacinia nec quam. 
+  Integer venenatis lorem ut sapien vulputate mattis. Nam quis consequat mauris. Fusce sit amet mi 
+  consequat, pellentesque ex vitae, hendrerit dui. In tellus tortor, tempus sit amet sagittis a, 
+  ullamcorper at justo. Praesent in efficitur lorem. Sed vitae enim maximus, facilisis ipsum vestibulum, 
+  finibus sapien. <span class="green">Donec aliquet enim eget massa egestas posuere. Vivamus a aliquet sapien, mollis pulvinar augue.</span>
+  Proin pharetra libero vel sem dignissim, vitae mattis augue viverra. Aenean mollis, leo consequat ullamcorper 
+  facilisis, est augue accumsan nisl, non pharetra ex sapien ac nunc. Duis eget lectus pellentesque ante vulputate molestie.   
+</div>
+</div>
+</section>
 
 
 
 
 
+
+
+
+<!-- End About me Section -->
 
 
 
