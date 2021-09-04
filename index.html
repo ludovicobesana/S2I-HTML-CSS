@@ -377,6 +377,80 @@ progress[value]::-webkit-progress-value {
   letter-spacing: 0px;
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+  margin-left: 146px;
+  margin-right: 146px;
+}
+
+
+.portfolio-card {
+  max-width: 1148px;
+  width: 1148px;
+  height: 990px;
+  padding: 2rem 2rem 0 2rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.portfolio__title {
+  font-family: "Poppins", sans-serif;
+  color: #F0F0F0;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 150px;
+  letter-spacing: -2px;
+}
+
+.portfolio__subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  color: #1BD560;
+  margin-left: 60px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+.portfolio__filter-tag {
+  color: #EDF1F4;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: -2px;
+}
+
+.portfolio__filter-tag:hover {
+  color: #5EC868;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: -2px;
+}
+
+.portfolio__filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 30px;
+  flex-wrap: wrap;
+  max-width: 90%;
+}
+
+.portfolio__filters a {
+  text-decoration: none;
+}
+
+.current div {
+    text-decoration: none;
+    color: #5EC868;
+    font-weight: bold;
+}
     
 </style>
 
@@ -396,7 +470,7 @@ progress[value]::-webkit-progress-value {
         <nav>
             <ul class="nav__links">
                 <li><a href="#about" class="nav__link">ABOUT ME</a></li>
-                <li><a href="#" class="nav__link">PORTFOLIO</a></li>
+                <li><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
                 <li><a href="#" class="nav__link">SKILLS</a></li>
                 <li><a href="#path" class="nav__link">PERCORSO</a></li>
                 <li><a href="#community" class="nav__link">COMMUNITY</a></li>
@@ -438,6 +512,30 @@ progress[value]::-webkit-progress-value {
 </div>
 </section>
 <!-- End About me Section -->
+
+<!-- Porfolio -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-card">
+    <div class="portfolio__title">PORTFOLIO</div>
+    <div class="portfolio__subtitle">Seleziona il mondo per visualizzare i progetti inerenti</div>
+    <div class="portfolio__filters">
+      <a href="#"><div class="portfolio__filter-tag">ALL</div></a>
+      <a href="#"><div class="portfolio__filter-tag">MINDSET</div></a>
+      <a href="#"><div class="portfolio__filter-tag">MARKETING</div></a>
+      <a href="#"><div class="portfolio__filter-tag">SVILUPPO WEB E APP</div></a>
+      <a href="#"><div class="portfolio__filter-tag">UX/UI DESIGN</div></a>
+      <a href="#"><div class="portfolio__filter-tag">BLOCKCHAIN</div></a>
+      <a href="#"><div class="portfolio__filter-tag">DATA SCIENCE</div></a>
+      <a href="#"><div class="portfolio__filter-tag">STARTUP</div></a>
+    </div>
+    <div class="portfolio__projects">
+
+    </div>
+  </div>
+
+
+</section>
+<!-- End Portfolio Section -->
 
 
 <!-- Percorso Section -->
@@ -507,11 +605,7 @@ progress[value]::-webkit-progress-value {
 
 
 
-<!-- Porfolio -->
-<section class="portfolio" id="portfolio">
 
-
-</section>
 
 <!-- Skills -->
 <section class="skills" id="skills">
