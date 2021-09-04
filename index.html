@@ -101,6 +101,42 @@ button {
     font-weight: bold;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+  margin-left: 146px;
+  margin-right: 146px;
+}
+
+.intro-card {
+  max-width: 1148px;
+  width: 1148px;
+  height: 662px;
+  padding: 2rem 2rem 0 2rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.intro__title {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 500px;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro__avatar {
+  position: absolute;
+  margin-top: 30px;
+  background-image: url(images/ludovicobesana.png);
+  width: 450px;
+  height: 450px;
+}
 
 .about {
     display: flex;
@@ -452,6 +488,65 @@ progress[value]::-webkit-progress-value {
     font-weight: bold;
 }
     
+    
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+  margin-left: 146px;
+  margin-right: 146px;
+}
+
+.skills-card {
+  max-width: 1148px;
+  width: 1148px;
+  height: 990px;
+  padding: 2rem 2rem 0 2rem;
+  background-color: white;
+  border-radius: 8px;
+}   
+
+.skills__title {
+  font-family: "Poppins", sans-serif;
+  color: #F0F0F0;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 150px;
+  letter-spacing: -2px;
+} 
+
+footer {
+  margin-top: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10%;
+  background-color: #333;
+}
+
+.footer__logo img {
+  width: 71px;
+  height: 71px;
+  margin: 10px;
+}
+  
+.footer__title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer__socials {
+  display: relative;
+  margin-left: 1000px;
+}
+
+.footer__linkedin img {
+  width: 30px;
+  height: 30px;
+}
+    
 </style>
 
 
@@ -471,7 +566,7 @@ progress[value]::-webkit-progress-value {
             <ul class="nav__links">
                 <li><a href="#about" class="nav__link">ABOUT ME</a></li>
                 <li><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
-                <li><a href="#" class="nav__link">SKILLS</a></li>
+                <li><a href="#skills" class="nav__link">SKILLS</a></li>
                 <li><a href="#path" class="nav__link">PERCORSO</a></li>
                 <li><a href="#community" class="nav__link">COMMUNITY</a></li>
             </ul>
@@ -484,7 +579,10 @@ progress[value]::-webkit-progress-value {
 
 <!-- Intro section -->
 <section class="intro" id="intro">
-
+ <div class="intro-card">
+   <div class="intro__avatar"> <div> </div> </div>
+   <div class="intro__title">Ludovico Besana</div>
+ </div>
 
 </section>
 <!-- End Intro section -->
@@ -536,6 +634,14 @@ progress[value]::-webkit-progress-value {
 
 </section>
 <!-- End Portfolio Section -->
+
+<!-- Skills -->
+<section class="skills" id="skills">
+  <div class="skills-card">
+    <div class="skills__title">SKILLS</div>
+  </div>
+</section>
+<!-- End Skills Section -->
 
 
 <!-- Percorso Section -->
@@ -606,17 +712,16 @@ progress[value]::-webkit-progress-value {
 
 
 
-
-<!-- Skills -->
-<section class="skills" id="skills">
-
-
-</section>
-
-
-
     <footer>
-
+      <div class="footer__logo"><a href="https://www.ludovicobesana.com" target="_blank"><img src="images/lb-logo.png"/></a></div>
+      <div class="footer__title">
+        Ludovico Besana - Progetto HTML & CSS <br>
+        <span class="green">Start2impact</span>                          
+      </div>
+      <div class="footer__socials">
+        <div class="footer__linkedin"><a href="https://www.linkedin.com/in/ludovicobesana/" target="_blank"><img src="images/linkedin.png"/></a></div>
+      </div>
+      
     </footer>
 
     </body>
