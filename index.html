@@ -269,6 +269,107 @@ div .community_photos {
   line-height: 22px;
   letter-spacing: 0px;
 }
+
+.path-card__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.path__progress {
+  margin-right: 100px;
+  margin-left: 70px;
+  margin-bottom: 150px;
+}
+
+.path-card__progress  {
+  margin-top: 130px;
+  background-color: #5EC868;
+  border-radius: 3px; 
+  width: 770px;
+  height: 3px;
+  margin-left: 30px;
+}
+
+.path-card__progress-icon:nth-child(1) div {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 15px;
+  background-image: url(images/level-1.png);
+  width: 77px;
+  height: 81px;
+}
+
+.path-card__progress-icon:nth-child(2) div {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 270px;
+  background-image: url(images/level-2.png);
+  width: 77px;
+  height: 81px;
+}
+
+.path-card__progress-icon:nth-child(3) div {
+  position: absolute;
+  margin-top: 95px;
+  margin-left: 500px;
+  background-image: url(images/level-3.png);
+  width: 77px;
+  height: 81px;
+}
+
+.path-card__progress-icon:nth-child(4) div {
+  position: absolute;
+  margin-top: 95px;
+  margin-left: 750px;
+  background-image: url(images/level-4.png);
+  width: 77px;
+  height: 81px;
+}
+
+.path-card__level1-label {
+  position: absolute;
+  margin-top: 200px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.path-card__level2-label {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 220px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.path-card__level3-label {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 480px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.path-card__level4-label {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 720px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
     
 </style>
 
@@ -338,8 +439,37 @@ div .community_photos {
   <div class="path__title noselect">IL MIO PERCORSO</div>
   <div class="path__subtitle noselect">Fare è il miglior modo di imparare</div>
   
+  <div class="path-card__title">Marketing</div>
   
+  <div class="path__progress">
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
   
+  <label class="path-card__level1-label">Inizio percorso</label>
+  <label class="path-card__level2-label">50% Guide e Progetti</label>
+  <label class="path-card__level3-label">Progetto Finale</label>
+  <label class="path-card__level4-label">Ruolo Certificato</label>
+  
+  <progress class="path-card__progress" value="32" max="100"></progress>
+  </div>
+  
+  <div class="path-card__title">Sviluppo & App</div>
+  
+  <div class="path__progress">
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  <div class="path-card__progress-icon"> <div> </div> </div>
+  
+  <label class="path-card__level1-label">Inizio percorso</label>
+  <label class="path-card__level2-label">50% Guide e Progetti</label>
+  <label class="path-card__level3-label">Progetto Finale</label>
+  <label class="path-card__level4-label">Ruolo Certificato</label>
+  
+  <progress class="path-card__progress" value="32" max="100"></progress>
+  </div>
   
   
   </div>
