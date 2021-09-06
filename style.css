@@ -607,3 +607,25 @@ footer {
   height: 10px;
   margin-right: 10px;
 }
+
+.marketing-strip {
+  background-color: #FE841F;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.marketing-color {
+  color: #FE841F;
+}
+
+.marketing-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
