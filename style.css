@@ -536,3 +536,73 @@ footer {
   width: 30px;
   height: 30px;
 }
+
+.portfolio__projects {
+  margin-top: 140px;
+}
+
+.project-card {
+  background-color: white;
+  max-width: 250px;
+  width: 250px;
+  height: 190px;
+  border-radius: 8px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mindset-strip {
+  background-color: #FFC406;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.mindset-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
+
+.project-card-title {
+  position: absolute;
+  max-width: 160px;
+  width: 160px;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 110px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+
+.marketing-color {
+  color: #FFC406;
+}
+
+.project-card-link {
+  position: absolute;
+  max-width: 160px;
+  width: 160px;
+  height: 17px;
+  margin-left: 18px;
+  margin-top: 165px;
+  color: white;
+  font-size: 8px;
+  letter-spacing: 0px;
+}
+
+.project-card-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-card-link-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
