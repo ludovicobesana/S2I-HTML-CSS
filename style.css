@@ -629,3 +629,25 @@ footer {
   background-image: url(images/finanza-personale.jpg);
   background-repeat: no-repeat;
 }
+
+.sviluppo-strip {
+  background-color: #3CA6FF;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.sviluppo-color {
+  color: #3CA6FF;
+}
+
+.sviluppo-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
