@@ -271,7 +271,7 @@ div .community_photos {
 .path-card {
   max-width: 1148px;
   width: 1148px;
-  height: 990px;
+  /* height: 990px; */
   padding: 2rem 2rem 0 2rem;
   background-color: white;
   border-radius: 8px;
