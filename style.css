@@ -416,7 +416,8 @@ progress[value]::-webkit-progress-value {
 .portfolio-card {
   max-width: 1148px;
   width: 1148px;
-  height: 990px;
+  /* height: 990px; */
+  height: auto;
   padding: 2rem 2rem 0 2rem;
   background-color: white;
   border-radius: 8px;
@@ -540,6 +541,13 @@ footer {
 .portfolio__projects {
   margin-top: 140px;
   margin-left: 50px;
+  margin-bottom: 140px;
+  display: grid;
+  justify-content: center;
+  margin: 65px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
+  row-gap: 50px;
 }
 
 .project-card {
@@ -643,6 +651,94 @@ footer {
 }
 
 .sviluppo-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
+
+.ux-ui-strip {
+  background-color: #79C23E;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.ux-ui-color {
+  color: #79C23E;
+}
+
+.ux-ui-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
+
+.blockchain-strip {
+  background-color: #F61958;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.blockchain-color {
+  color: #F61958;
+}
+
+.blockchain-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
+
+.data-science-strip {
+  background-color: #32B7BC;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.data-science-color {
+  color: #32B7BC;
+}
+
+.data-science-thumbnail {
+  position: absolute;
+  margin-top: 8px;
+  max-width: 250px;
+  width: 250px;
+  height: 150px;
+  background-image: url(images/finanza-personale.jpg);
+  background-repeat: no-repeat;
+}
+
+.startup-strip {
+  background-color: #9966FF;
+  max-width: 250px;
+  width: 250px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.startup-color {
+  color: #9966FF;
+}
+
+.startup-thumbnail {
   position: absolute;
   margin-top: 8px;
   max-width: 250px;
