@@ -747,3 +747,11 @@ footer > .footer__socials {
   background-image: url(images/finanza-personale.jpg);
   background-repeat: no-repeat;
 }
+
+.portfolio__filters {
+  cursor: pointer;
+}
+
+.itembox.hide {
+  display: none;
+}

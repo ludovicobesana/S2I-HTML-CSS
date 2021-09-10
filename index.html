@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Progetto HTML & CSS | Ludovico Besana</title>
         <link rel="icon" type="images/png" href="images/favicon.ico" />
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -72,19 +72,19 @@
     <div class="portfolio__title noselect">PORTFOLIO</div>
     <div class="portfolio__subtitle noselect">Seleziona il mondo per visualizzare i progetti inerenti</div>
     <div class="portfolio__filters">
-      <a href="#"><div class="portfolio__filter-tag" data-filter="all">ALL</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="mindset">MINDSET</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="marketing">MARKETING</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="sviluppo">SVILUPPO WEB E APP</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="ux-ui">UX/UI DESIGN</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="blockchain">BLOCKCHAIN</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="data-science">DATA SCIENCE</div></a>
-      <a href="#"><div class="portfolio__filter-tag" data-filter="startup">STARTUP</div></a>
+      <div class="portfolio__filter-tag" data-filter="all">ALL</div>
+      <div class="portfolio__filter-tag" data-filter="mindset">MINDSET</div>
+      <div class="portfolio__filter-tag" data-filter="marketing">MARKETING</div>
+      <div class="portfolio__filter-tag" data-filter="dev">SVILUPPO WEB E APP</div>
+      <div class="portfolio__filter-tag" data-filter="ux-ui">UX/UI DESIGN</div>
+      <div class="portfolio__filter-tag" data-filter="blockchain">BLOCKCHAIN</div>
+      <div class="portfolio__filter-tag" data-filter="data-science">DATA SCIENCE</div>
+      <div class="portfolio__filter-tag" data-filter="startup">STARTUP</div>
     </div>
     <div class="portfolio__projects">
       
       <!-- Mindset Project Card -->
-      <div class="itembox mindset">
+      <div class="itembox mindset" data-item="mindset">
         <div class="project-card">
           <div class="mindset-strip">
             <div class="mindset-thumbnail"></div>
@@ -100,7 +100,7 @@
       <!-- End Mindset Project Card -->
       
       <!-- Marketing Project Card -->
-      <div class="itembox marketing">
+      <div class="itembox marketing" data-item="marketing">
           <div class="project-card">
             <div class="marketing-strip">
               <div class="marketing-thumbnail"></div>
@@ -117,7 +117,7 @@
       
       
       <!-- Sviluppo Card -->
-      <div class="itembox sviluppo">
+      <div class="itembox sviluppo" data-item="dev">
       <div class="project-card">
         <div class="sviluppo-strip">
           <div class="sviluppo-thumbnail"></div>
@@ -134,7 +134,7 @@
       
       
       <!-- UX/UI Card -->
-      <div class="itembox ux-ui">
+      <div class="itembox ux-ui" data-item="ux-ui"> 
         <div class="project-card">
           <div class="ux-ui-strip">
             <div class="ux-ui-thumbnail"></div>
@@ -152,7 +152,7 @@
       
       
       <!-- Blockchain Card -->
-      <div class="itembox blockchain">
+      <div class="itembox blockchain" data-item="blockchain">
         <div class="project-card">
           <div class="blockchain-strip">
             <div class="blockchain-thumbnail"></div>
@@ -168,7 +168,7 @@
       <!-- End Blockchain Card -->
       
       <!-- Data Science Card -->
-      <div class="itembox data-science">
+      <div class="itembox data-science" data-item="data-science">
         <div class="project-card">
           <div class="data-science-strip">
             <div class="data-science-thumbnail"></div>
@@ -184,7 +184,7 @@
       <!-- End Data Science Card -->
       
       <!-- Startup Card -->
-      <div class="itembox startup">
+      <div class="itembox startup" data-item="startup">
         <div class="project-card">
           <div class="startup-strip">
             <div class="startup-thumbnail"></div>
@@ -293,6 +293,37 @@
       </div>
       
     </footer>
+    
+    
+    <script> 
+      let list = document.querySelectorAll('.portfolio__filter-tag');
+      let itemBox = document.querySelectorAll('.itembox');
+      
+      for (let i = 0; i < list.length; i++){
+        list[i].addEventListener('click', function() {
+
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove('active');
+          }
+          
+          this.classList.add('active');
+          
+          let dataFilter = this.getAttribute('data-filter');
+          
+          for (let k = 0; k < itemBox.length; k++) {
+            itemBox[k].classList.add('hide');  
+            if (itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+              itemBox[k].classList.remove('hide'); 
+              itemBox[k].classList.add('active');
+            }
+          }  
+          
+        })
+      }
+    </script>
+    
+    
+    
 
     </body>
 
