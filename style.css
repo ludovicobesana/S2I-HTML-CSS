@@ -755,3 +755,28 @@ footer > .footer__socials {
 .itembox.hide {
   display: none;
 }
+
+.premium-icon img {
+  width: 16.47px;
+  height: 16px;
+}
+
+.studyPath-badge img {
+  width: 51.77px;
+  height: 53px;
+}
+
+.studyContributions-health-icon img {
+  width: 123.55px;
+  height: 120px;
+}
+
+.studyContributions-life-icon img {
+  width: 123.55px;
+  height: 120px;
+}
+
+.studyContributions-justice-icon img {
+  width: 123.55px;
+  height: 120px;
+}
