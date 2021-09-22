@@ -192,8 +192,35 @@ button {
   margin-left: 420px;
 }
 
+.studyContributions {
+  margin-left: 600px;
+  margin-top: 30px;
+  width: 488px;
+  height: 175px;
+}
+
+.studyContributions-title {
+  font-size: 24px;
+  font-weight: 400;
+}
 
 
+.studyContributions-health-icon {
+  margin-top: 30px;
+  position: absolute;
+}
+
+.studyContributions-life-icon {
+  margin-top: 30px;
+  margin-left: 170px;
+  position: absolute;
+}
+
+.studyContributions-justice-icon {
+  margin-top: 30px;
+  margin-left: 340px;
+  position: absolute;
+}
 
 
 /* About Section */
