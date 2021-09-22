@@ -9,6 +9,12 @@
         <title>Progetto HTML & CSS | Ludovico Besana</title>
         <link rel="icon" type="images/png" href="images/favicon.ico" />
         <link rel="stylesheet" href="style.css">
+        
+        
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -239,9 +245,33 @@
     <div class="skills__title noselect">SKILLS</div>
     
     <div class="skills__sectionTitle">
+    
+    <div class="skills__sectionTitleText">
     Hard skills
     </div>
     
+    <div class="skills_sectionTitleInfo" 
+    data-toggle="popover" 
+    data-html="true"
+    data-content="<strong>livello 0 - 3</strong> ha acquisito le prime competenze, deve ancora mettersi alla prova;<br>
+    <strong>livello 4 - 6</strong> ha competenze base e va supervisionato nello svolgimento del lavoro;<br>
+    <strong>livello 7 - 9</strong> è parzialmente autonomo nello svolgimento del lavoro;<br>
+    <strong>da livello 10</strong> è tendenzialmente autonomo nello svolgimento del lavoro<br>">
+    
+      <img src="images/question.svg">
+    </div>
+    </div>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="skill-card">
     <!-- <div class="skill-card__title">
       
@@ -261,7 +291,10 @@
     </div>
     
     <div class="skills__sectionTitle">
-      Soft skills
+      
+    <div class="skills__sectionTitleText">
+    Soft skills
+    </div>
     </div>
     
     <div class="skill-card">
@@ -282,9 +315,24 @@
       </div> -->
     </div>
     
-    <div class="skills__sectionTitle">
-      Lingue
-    </div>
+   <div class="skills__sectionTitle">
+       
+   <div class="skills__sectionTitleText">
+   Lingue
+   </div>
+   
+   <div class="skills_sectionTitleInfoLanguage" 
+   data-toggle="popover" 
+   data-html="true"
+   data-content="<strong>livello 1:</strong> Elementare, comprende espressioni e testi molto brevi e semplici<br>
+   <strong>livello 2:</strong> Pre-intermedio, comprende linguaggi e testi brevi e semplici<br>
+   <strong>livello 3:</strong> Intermedio, comprende discorsi e testi chiari e semplici<br>
+   <strong>livello 4:</strong> Intermedio superiore, comprende testi complessi e lingua parlata quotidianamente<br>
+   <strong>livello 5:</strong> Avanzato, comprende facilmente lunghi testi e discorsi<br>
+   <strong>livello 6:</strong> Esperto, comprende testi complessi e la lingua parlata ad un ritmo veloce<br>">
+     <img src="images/question.svg">
+   </div>
+   </div>
     
     <div class="skill-card">
     <!-- <div class="skill-card__title">
@@ -421,7 +469,15 @@
           }  
           
         })
-      }
+      } 
+      
+      $(document).ready(function() {
+         $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover'
+         });
+      });
+      
     </script>
     
     
