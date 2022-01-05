@@ -10,8 +10,7 @@
 
 #### Credits:
 
-
-####### Docs:
+###### Docs:
 
 - Pop over: https://getbootstrap.com/docs/4.0/components/popovers/
 - Collapse: https://getbootstrap.com/docs/4.0/components/collapse/
