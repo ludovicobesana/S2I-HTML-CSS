@@ -1,8 +1,12 @@
 # S2I-HTML-CSS
 
+[![Cover](assets/images/Cover.png)](https://ludovicobesana.github.io/S2I-HTML-CSS/)
+
 Progetto pratico del [Corso HTML & CSS di start2impact](https://www.start2impact.it/corsi/html-css/): un sito personale a pagina singola pensato per presentare profilo, competenze e progetti a potenziali aziende, come richiesto dalla consegna del corso.
 
 Demo: https://ludovicobesana.github.io/S2I-HTML-CSS/
+
+Design Figma: https://www.figma.com/design/14Bnrel9cBxEEGZu0z3C3Q/Progetto-HTML---CSS-S2I?node-id=506-0&t=iEUX6LRRFv0OG7O4-1
 
 ## Struttura della pagina
 
