@@ -7,49 +7,61 @@
     <meta property="og:image" content="https://i.imgur.com/q1Pexz0.png" />
     <meta property="og:description" content="Lorem Ipsum" />
     <title>Progetto HTML & CSS | Ludovico Besana</title>
-    <link rel="icon" type="images/png" href="assets/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <!-- Navbar Desktop -->
+    <a href="#main" class="skip-link">Vai al contenuto</a>
+
+    <!-- Navbar -->
     <header>
       <div class="brand">
-        <a href="#intro" class="#">
+        <a href="#intro">
           <img src="assets/images/start2impact.png" alt="start2impact" />
         </a>
       </div>
-      <nav>
-        <ul class="nav__links">
-          <li><a href="#about" class="nav__link">ABOUT ME</a></li>
-          <li><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
-          <li><a href="#skills" class="nav__link">SKILLS</a></li>
-          <li><a href="#path" class="nav__link">PERCORSO</a></li>
-          <li><a href="#community" class="nav__link">COMMUNITY</a></li>
-        </ul>
-      </nav>
-      <a href="mailto:info@ludovicobesana.com" class="cta" target="_blank"
-        ><button>CONTATTAMI</button></a
+      <button
+        type="button"
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Apri il menu di navigazione"
       >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <div class="nav__panel" id="primary-nav">
+        <nav aria-label="Navigazione principale">
+          <ul class="nav__links">
+            <li><a href="#about" class="nav__link">ABOUT ME</a></li>
+            <li><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+            <li><a href="#skills" class="nav__link">SKILLS</a></li>
+            <li><a href="#path" class="nav__link">PERCORSO</a></li>
+            <li><a href="#community" class="nav__link">COMMUNITY</a></li>
+          </ul>
+        </nav>
+        <a href="mailto:info@ludovicobesana.com" class="cta nav__cta"
+          ><button type="button">CONTATTAMI</button></a
+        >
+      </div>
     </header>
     <!-- End Navbar -->
 
+    <main id="main">
     <!-- Intro section -->
     <section class="intro" id="intro">
       <div class="intro-card">
-        <div class="intro__avatar"><div></div></div>
+        <div class="intro__avatar" role="img" aria-label="Foto profilo di Ludovico Besana"><div></div></div>
 
         <div class="premium">
           <div class="premium-icon noselect">
-            <img src="assets/images/star.png" />
+            <img src="assets/images/star.png" alt="" />
           </div>
           <div class="premium-title">PREMIUM MEMBER</div>
         </div>
@@ -58,7 +70,7 @@
 
         <div class="studyPath">
           <div class="studyPath-badge noselect">
-            <img src="assets/images/e-commerce.png" />
+            <img src="assets/images/e-commerce.png" alt="" />
           </div>
           <div class="studyPath-title">E-commerce student</div>
         </div>
@@ -73,16 +85,16 @@
 
         <div class="studyContributions">
           <div class="studyContributions-title">
-            Con il mio lavoro vorrei contribuire a:
+            <b>Con il mio lavoro vorrei contribuire a:</b>
           </div>
           <div class="studyContributions-health-icon noselect">
-            <img src="assets/images/salute-e-benessere.png" />
+            <img src="assets/images/salute-e-benessere.png" alt="Salute e benessere" />
           </div>
           <div class="studyContributions-life-icon noselect">
-            <img src="assets/images/la-vita-sulla-terra.png" />
+            <img src="assets/images/la-vita-sulla-terra.png" alt="La vita sulla terra" />
           </div>
           <div class="studyContributions-justice-icon noselect">
-            <img src="assets/images/pace-e-giustizia.png" />
+            <img src="assets/images/pace-e-giustizia.png" alt="Pace, giustizia e istituzioni forti" />
           </div>
         </div>
       </div>
@@ -104,32 +116,32 @@
     </section>
     <!-- End About me Section -->
 
-    <!-- Porfolio -->
+    <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="portfolio-card">
         <div class="portfolio__title noselect">PORTFOLIO</div>
         <div class="portfolio__subtitle noselect">
           Seleziona il mondo per visualizzare i progetti inerenti
         </div>
-        <div class="portfolio__filters noselect">
-          <div class="portfolio__filter-tag" data-filter="all">ALL</div>
-          <div class="portfolio__filter-tag" data-filter="mindset">MINDSET</div>
-          <div class="portfolio__filter-tag" data-filter="marketing">
+        <div class="portfolio__filters noselect" role="group" aria-label="Filtra progetti per categoria">
+          <button type="button" class="portfolio__filter-tag active" data-filter="all" aria-pressed="true">ALL</button>
+          <button type="button" class="portfolio__filter-tag" data-filter="mindset" aria-pressed="false">MINDSET</button>
+          <button type="button" class="portfolio__filter-tag" data-filter="marketing" aria-pressed="false">
             MARKETING
-          </div>
-          <div class="portfolio__filter-tag" data-filter="dev">
+          </button>
+          <button type="button" class="portfolio__filter-tag" data-filter="dev" aria-pressed="false">
             SVILUPPO WEB E APP
-          </div>
-          <div class="portfolio__filter-tag" data-filter="ux-ui">
+          </button>
+          <button type="button" class="portfolio__filter-tag" data-filter="ux-ui" aria-pressed="false">
             UX/UI DESIGN
-          </div>
-          <div class="portfolio__filter-tag" data-filter="blockchain">
+          </button>
+          <button type="button" class="portfolio__filter-tag" data-filter="blockchain" aria-pressed="false">
             BLOCKCHAIN
-          </div>
-          <div class="portfolio__filter-tag" data-filter="data-science">
+          </button>
+          <button type="button" class="portfolio__filter-tag" data-filter="data-science" aria-pressed="false">
             DATA SCIENCE
-          </div>
-          <div class="portfolio__filter-tag" data-filter="startup">STARTUP</div>
+          </button>
+          <button type="button" class="portfolio__filter-tag" data-filter="startup" aria-pressed="false">STARTUP</button>
         </div>
         <div class="portfolio__projects">
           <!-- Mindset Project Card -->
@@ -148,6 +160,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -170,6 +183,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -192,6 +206,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -214,6 +229,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -236,6 +252,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -258,6 +275,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -280,6 +298,7 @@
                     ><img
                       src="assets/images/link-icon.png"
                       class="project-card-link-icon"
+                      alt=""
                     />Link</a
                   >
                 </div>
@@ -297,171 +316,828 @@
       <div class="skills-card">
         <div class="skills__title noselect">SKILLS</div>
 
-        <div class="skills__sectionTitle">
-          <div class="skills__sectionTitleText">Hard skills</div>
+        <!-- Hard skills group -->
+        <div class="skills__group">
+          <div class="skills__sectionTitle">
+            <div class="skills__sectionTitleText">Hard skills</div>
 
-          <div
-            class="skills_sectionTitleInfo"
-            data-toggle="popover"
-            data-html="true"
-            data-content="<strong>livello 0 - 3</strong> ha acquisito le prime competenze, deve ancora mettersi alla prova;<br>
+            <button
+              type="button"
+              class="skills_sectionTitleInfo"
+              data-toggle="popover"
+              data-html="true"
+              aria-label="Cosa significano i livelli delle hard skill"
+              data-content="<strong>livello 0 - 3</strong> ha acquisito le prime competenze, deve ancora mettersi alla prova;<br>
     <strong>livello 4 - 6</strong> ha competenze base e va supervisionato nello svolgimento del lavoro;<br>
     <strong>livello 7 - 9</strong> è parzialmente autonomo nello svolgimento del lavoro;<br>
     <strong>da livello 10</strong> è tendenzialmente autonomo nello svolgimento del lavoro<br>"
-          >
-            <img src="assets/images/question.svg" />
+            >
+              <img src="assets/images/question.svg" alt="" />
+            </button>
           </div>
-        </div>
 
-        <!-- Skill Card -->
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__BlueCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/hardskills-icons/html.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
+          <div class="skills-carousel">
+            <button type="button" class="skills-carousel__arrow" data-carousel-prev aria-label="Skill precedenti" disabled>
+              <img src="assets/images/circle-arrow-left.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
+
+            <div class="skills-carousel__track" data-carousel-track tabindex="0" role="group" aria-label="Elenco hard skill">
+              <!-- Skill Card -->
+              <div class="skill-card" data-score="2">
+                <div class="skill-items">
+                  <div class="skill-card__BlueCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/hardskills-icons/html.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>2</span>
+                    </div>
+                    <label>HTML</label>
+                  </div>
+                </div>
               </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>2</span>
+              <!-- End Skill Card -->
+
+              <div class="skill-card" data-score="3">
+                <div class="skill-items">
+                  <div class="skill-card__OrangeCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/hardskills-icons/excel.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>3</span>
+                    </div>
+                    <label>Excel</label>
+                  </div>
+                </div>
               </div>
-              <label>HTML</label>
+
+              <div class="skill-card" data-score="2">
+                <div class="skill-items">
+                  <div class="skill-card__BlueCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/hardskills-icons/sql.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>2</span>
+                    </div>
+                    <label>MySQL</label>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <!-- End Skill Card -->
 
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__OrangeCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/hardskills-icons/excel.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
+            <button type="button" class="skills-carousel__arrow" data-carousel-next aria-label="Skill successive" disabled>
+              <img src="assets/images/circle-arrow-right.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
+          </div>
+
+          <details class="skills__more">
+            <summary class="skills__more-toggle">
+              <span>Visualizza altre skills</span>
+              <span class="skills__more-icon" aria-hidden="true">
+                <i class="fa fa-plus"></i>
+                <i class="fa fa-minus"></i>
+              </span>
+            </summary>
+            <div class="skills__more-grid">
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Statistics.png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Statistics</span>
               </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>3</span>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/google-a.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Google Ads</span>
               </div>
-              <label>Excel</label>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/wireframing.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Wireframing</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/user-testing.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>User Testing</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Data_Visualization.png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Data Visualization</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/discovery.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Discovery</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/direct-marketing.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Direct Marketing</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Web_Development.png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Web Development</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Machine_Learning.png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Machine Learning</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/React_Base.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>React</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/grafica.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Grafica</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/seo.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>SEO</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/prototyping.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Prototyping</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Deep_Learning.png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Deep Learning</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/nodejs.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/wordpress.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>WordPress</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/facebook-a.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Facebook Ads</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/ruby-on-rails.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Ruby on Rails</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/javascript.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Python.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Python</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Blockchain.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Blockchain</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Angular.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Angular</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Azure_DevOps.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Azure DevOps</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/DevOps.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>DevOps</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/DJango.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Django</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Ecommerce.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>E-commerce</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__LightBlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Java_Base.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Java</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__GreenCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Linkedin_base.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>LinkedIn Ads</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/MongoDB.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Photo_Editing.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Photo Editing</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/React_Native%20(1).png" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>React Native</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Redis.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Redis</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__RedCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Solidity.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Solidity</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Swift.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Swift</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Video_Editing2.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Video Editing</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/Vuejs.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Vue.js</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/php.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>PHP</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/scrittura.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Scrittura</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__OrangeCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/social-media.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Social Media</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__BlueCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/css.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>CSS</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/hardskills-icons/analisi-dati.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Analisi dati</span>
+              </div>
             </div>
-          </div>
+          </details>
         </div>
+        <!-- End Hard skills group -->
 
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__BlueCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/hardskills-icons/sql.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
+        <!-- Soft skills group -->
+        <div class="skills__group">
+          <div class="skills__sectionTitle">
+            <div class="skills__sectionTitleText">Soft skills</div>
+          </div>
+
+          <div class="skills-carousel">
+            <button type="button" class="skills-carousel__arrow" data-carousel-prev aria-label="Skill precedenti" disabled>
+              <img src="assets/images/circle-arrow-left.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
+
+            <div class="skills-carousel__track" data-carousel-track tabindex="0" role="group" aria-label="Elenco soft skill">
+              <div class="skill-card" data-score="3">
+                <div class="skill-items">
+                  <div class="skill-card__PurpleCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/softskills-icons/precisione.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>3</span>
+                    </div>
+                    <label>Precisione</label>
+                  </div>
+                </div>
               </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>2</span>
+
+              <div class="skill-card" data-score="3">
+                <div class="skill-items">
+                  <div class="skill-card__PurpleCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/softskills-icons/leadership.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>3</span>
+                    </div>
+                    <label>Leadership</label>
+                  </div>
+                </div>
               </div>
-              <label>MySQL</label>
+
+              <div class="skill-card" data-score="3">
+                <div class="skill-items">
+                  <div class="skill-card__PurpleCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/softskills-icons/networking.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>3</span>
+                    </div>
+                    <label>Networking</label>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <button type="button" class="skills-carousel__arrow" data-carousel-next aria-label="Skill successive" disabled>
+              <img src="assets/images/circle-arrow-right.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
           </div>
-        </div>
 
-        <div class="skills__sectionTitle">
-          <div class="skills__sectionTitleText">Soft skills</div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__PurpleCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/softskills-icons/precisione.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
+          <details class="skills__more">
+            <summary class="skills__more-toggle">
+              <span>Visualizza altre skills</span>
+              <span class="skills__more-icon" aria-hidden="true">
+                <i class="fa fa-plus"></i>
+                <i class="fa fa-minus"></i>
+              </span>
+            </summary>
+            <div class="skills__more-grid">
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/problem-solving.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Problem Solving</span>
               </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>3</span>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/public-speaking.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Public Speaking</span>
               </div>
-              <label>Precisione</label>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/creativita_s.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Creatività</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/negoziazione.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Negoziazione</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/mentoring.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Mentoring</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/resilienza.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Resilienza</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/proattivita_s.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Proattività</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/people-oriented_s.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>People Oriented</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/team-working_s.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Team Working</span>
+              </div>
+              <div class="skill-preview" data-score="0">
+                <div class="skill-card__PurpleCircle">
+                  <div class="skill-card__WhiteCircle">
+                    <img src="assets/images/softskills-icons/Impatto_Soc_Base.svg" width="38.64px" height="25.36px" alt="" />
+                  </div>
+                  <div class="skill-card__miniWhiteCircle">
+                    <span>0</span>
+                  </div>
+                </div>
+                <span>Impatto Sociale</span>
+              </div>
             </div>
-          </div>
+          </details>
         </div>
+        <!-- End Soft skills group -->
 
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__PurpleCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/softskills-icons/leadership.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
-              </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>3</span>
-              </div>
-              <label>Leadership</label>
-            </div>
-          </div>
-        </div>
+        <!-- Lingue group -->
+        <div class="skills__group">
+          <div class="skills__sectionTitle">
+            <div class="skills__sectionTitleText">Lingue</div>
 
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__PurpleCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/softskills-icons/networking.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
-              </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>3</span>
-              </div>
-              <label>Networking</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__sectionTitle">
-          <div class="skills__sectionTitleText">Lingue</div>
-
-          <div
-            class="skills_sectionTitleInfoLanguage"
-            data-toggle="popover"
-            data-html="true"
-            data-content="<strong>livello 1:</strong> Elementare, comprende espressioni e testi molto brevi e semplici<br>
+            <button
+              type="button"
+              class="skills_sectionTitleInfoLanguage"
+              data-toggle="popover"
+              data-html="true"
+              aria-label="Cosa significano i livelli delle lingue"
+              data-content="<strong>livello 1:</strong> Elementare, comprende espressioni e testi molto brevi e semplici<br>
    <strong>livello 2:</strong> Pre-intermedio, comprende linguaggi e testi brevi e semplici<br>
    <strong>livello 3:</strong> Intermedio, comprende discorsi e testi chiari e semplici<br>
    <strong>livello 4:</strong> Intermedio superiore, comprende testi complessi e lingua parlata quotidianamente<br>
    <strong>livello 5:</strong> Avanzato, comprende facilmente lunghi testi e discorsi<br>
    <strong>livello 6:</strong> Esperto, comprende testi complessi e la lingua parlata ad un ritmo veloce<br>"
-          >
-            <img src="assets/images/question.svg" />
+            >
+              <img src="assets/images/question.svg" alt="" />
+            </button>
           </div>
-        </div>
 
-        <div class="skill-card">
-          <div class="skill-items">
-            <div class="skill-card__RedCircle">
-              <div class="skill-card__WhiteCircle">
-                <img
-                  src="assets/images/languages-icons/inglese.svg"
-                  width="38.64px"
-                  height="25.36px"
-                />
+          <div class="skills-carousel">
+            <button type="button" class="skills-carousel__arrow" data-carousel-prev aria-label="Lingue precedenti" disabled>
+              <img src="assets/images/circle-arrow-left.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
+
+            <div class="skills-carousel__track" data-carousel-track tabindex="0" role="group" aria-label="Elenco lingue">
+              <div class="skill-card" data-score="5">
+                <div class="skill-items">
+                  <div class="skill-card__RedCircle">
+                    <div class="skill-card__WhiteCircle">
+                      <img
+                        src="assets/images/languages-icons/inglese.svg"
+                        width="38.64px"
+                        height="25.36px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="skill-card__miniWhiteCircle">
+                      <span>5</span>
+                    </div>
+                    <label>Inglese</label>
+                  </div>
+                </div>
               </div>
-              <div class="skill-card__miniWhiteCircle">
-                <span>5</span>
-              </div>
-              <label>Inglese</label>
             </div>
+
+            <button type="button" class="skills-carousel__arrow" data-carousel-next aria-label="Lingue successive" disabled>
+              <img src="assets/images/circle-arrow-right.png" class="skills-carousel__arrow-icon" alt="" />
+            </button>
           </div>
+
+          <details class="skills__more">
+            <summary class="skills__more-toggle">
+              <span>Visualizza altre skills</span>
+              <span class="skills__more-icon" aria-hidden="true">
+                <i class="fa fa-plus"></i>
+                <i class="fa fa-minus"></i>
+              </span>
+            </summary>
+            <div class="skills__more-grid">
+              <!-- Le lingue non ancora valutate (livello 0) vengono aggiunte qui -->
+            </div>
+          </details>
         </div>
+        <!-- End Lingue group -->
       </div>
     </section>
     <!-- End Skills Section -->
@@ -516,23 +1192,24 @@
         <div class="community__subtitle noselect">
           Esperienze, passioni condivise e molto altro!
         </div>
-        <div class="community_photos">
-          <div class="community__photo"><div></div></div>
-          <div class="community__photo"><div></div></div>
-          <div class="community__photo"><div></div></div>
-          <div class="community__photo"><div></div></div>
-          <div class="community__photo"><div></div></div>
-          <div class="community__photo"><div></div></div>
+        <div class="community_photos" role="list" aria-label="Foto della community">
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
+          <div class="community__photo" role="listitem" aria-hidden="true"><div></div></div>
         </div>
       </div>
     </section>
     <!-- End Community Section -->
+    </main>
 
     <!-- Footer -->
     <footer>
       <div class="footer__logo">
         <a href="https://www.ludovicobesana.com" target="_blank"
-          ><img src="assets/images/lb-logo.png"
+          ><img src="assets/images/lb-logo.png" alt="Ludovico Besana"
         /></a>
       </div>
       <div class="footer__title">
@@ -541,8 +1218,8 @@
       </div>
       <div class="footer__socials">
         <div class="footer__linkedin">
-          <a href="https://www.linkedin.com/in/ludovicobesana/" target="_blank"
-            ><img src="assets/images/linkedin.png"
+          <a href="https://www.linkedin.com/in/ludovicobesana/" target="_blank" aria-label="Profilo LinkedIn di Ludovico Besana"
+            ><img src="assets/images/linkedin.png" alt=""
           /></a>
         </div>
       </div>
@@ -550,6 +1227,7 @@
     <!-- End Footer -->
 
     <script>
+      // Portfolio filter
       let list = document.querySelectorAll(".portfolio__filter-tag");
       let itemBox = document.querySelectorAll(".itembox");
 
@@ -557,9 +1235,11 @@
         list[i].addEventListener("click", function () {
           for (let j = 0; j < list.length; j++) {
             list[j].classList.remove("active");
+            list[j].setAttribute("aria-pressed", "false");
           }
 
           this.classList.add("active");
+          this.setAttribute("aria-pressed", "true");
 
           let dataFilter = this.getAttribute("data-filter");
 
@@ -576,10 +1256,86 @@
         });
       }
 
+      // Mobile navigation menu
+      let navToggle = document.querySelector(".nav__toggle");
+      let primaryNav = document.getElementById("primary-nav");
+
+      function closeNav() {
+        primaryNav.classList.remove("nav--open");
+        navToggle.classList.remove("nav__toggle--active");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
+      }
+
+      navToggle.addEventListener("click", function () {
+        let isOpen = primaryNav.classList.toggle("nav--open");
+        navToggle.classList.toggle("nav__toggle--active", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        document.body.classList.toggle("no-scroll", isOpen);
+      });
+
+      primaryNav.querySelectorAll(".nav__link").forEach(function (link) {
+        link.addEventListener("click", closeNav);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeNav();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          primaryNav.classList.contains("nav--open") &&
+          !primaryNav.contains(event.target) &&
+          !navToggle.contains(event.target)
+        ) {
+          closeNav();
+        }
+      });
+
+      // Skills carousels
+      document.querySelectorAll(".skills-carousel").forEach(function (carousel) {
+        let track = carousel.querySelector("[data-carousel-track]");
+        let prevBtn = carousel.querySelector("[data-carousel-prev]");
+        let nextBtn = carousel.querySelector("[data-carousel-next]");
+
+        function stepWidth() {
+          let card = track.querySelector(".skill-card");
+          if (!card) return track.clientWidth;
+          let gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+          return card.getBoundingClientRect().width + gap;
+        }
+
+        function updateArrows() {
+          prevBtn.disabled = track.scrollLeft <= 0;
+          nextBtn.disabled =
+            track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+        }
+
+        prevBtn.addEventListener("click", function () {
+          track.scrollBy({ left: -stepWidth(), behavior: "smooth" });
+        });
+
+        nextBtn.addEventListener("click", function () {
+          track.scrollBy({ left: stepWidth(), behavior: "smooth" });
+        });
+
+        track.addEventListener("scroll", updateArrows);
+        window.addEventListener("resize", updateArrows);
+        updateArrows();
+      });
+
+      // Hide the "Visualizza altre skills" toggle when there is nothing to show
+      document.querySelectorAll(".skills__more").forEach(function (details) {
+        let grid = details.querySelector(".skills__more-grid");
+        if (!grid.children.length) {
+          details.classList.add("hide");
+        }
+      });
+
       $(document).ready(function () {
         $('[data-toggle="popover"]').popover({
           placement: "top",
-          trigger: "hover",
+          trigger: "hover focus",
         });
       });
     </script>
