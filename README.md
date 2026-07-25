@@ -27,7 +27,7 @@ Il sito è una single page divisa in sezioni, raggiungibili dalla navbar tramite
 - **Google Fonts**: Montserrat, Poppins e Space Grotesk per differenziare titoli, sottotitoli e testo.
 - **Bootstrap 3** (via CDN) usato solo per il componente popover (tooltip sui livelli di competenza) e jQuery come sua dipendenza.
 - **JavaScript vanilla** per il filtro del portfolio: al click su un tag di filtro, le card vengono mostrate/nascoste tramite toggle della classe `.hide` in base all'attributo `data-item`/`data-filter`.
-- **Responsive**: non implementato, il progetto usa dimensioni fisse in px, come da fase iniziale del percorso di apprendimento del corso.
+- **Responsive**: implementato per web, tablet e mobile.
 
 ## Tecnologie
 
